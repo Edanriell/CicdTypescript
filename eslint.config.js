@@ -7,13 +7,14 @@ import pluginSecurity from "eslint-plugin-security";
 export default defineConfig([
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
-    plugins: { js, security: pluginSecurity },  // add pluginSecurity here
-    extends: ["js/recommended", "plugin:security/recommended"],
+    plugins: { js },
+    extends: ["js/recommended"],
   },
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     languageOptions: { globals: globals.node },
   },
   tseslint.configs.recommended,
+  pluginSecurity.configs.recommended,
 ]);
 
